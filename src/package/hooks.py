@@ -46,10 +46,13 @@ class ProjectHooks:
             A mapping from a pipeline name to a ``Pipeline`` object.
 
         """
+        ""
         de_pipeline = de.create_pipeline()
         return {
             "de": de_pipeline,
-            "__default__": Pipeline([])
+            "__default__": Pipeline([
+                de.create_pipeline()
+            ])
         }
 
     @hook_impl
@@ -68,3 +71,4 @@ class ProjectHooks:
         return DataCatalog.from_config(
             catalog, credentials, load_versions, save_version, journal
         )
+project_hooks = ProjectHooks()
