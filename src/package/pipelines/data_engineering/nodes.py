@@ -8,7 +8,7 @@ return_greeting_node = node(
     func=return_greeting,
     inputs=None,
     outputs="my_salutation",
-    name="greeting_node"
+    name="return_greeting_node"
 )
 
 # Prepare second node
@@ -18,6 +18,6 @@ def join_statements(gretting):
 join_statements_node = node(
     func=join_statements,
     inputs="my_salution",
-    outpuest="my_message",
-    name="join_node"
+    outputs="my_message",
+    name="join_statements_node"
 )
