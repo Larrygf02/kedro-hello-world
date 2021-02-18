@@ -9,3 +9,13 @@ return_greeting_node = node(
     inputs=None,
     outputs="my_salutation"
 )
+
+# Prepare second node
+def join_statements(gretting):
+    return f"{gretting} Kedro!"
+
+join_statements_node = node(
+    func=join_statements,
+    inputs="my_salution",
+    outpuest="my_message"
+)
