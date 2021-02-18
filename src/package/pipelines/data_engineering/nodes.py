@@ -17,7 +17,7 @@ def join_statements(gretting):
 
 join_statements_node = node(
     func=join_statements,
-    inputs="my_salution",
+    inputs="my_salutation",
     outputs="my_message",
     name="join_statements_node"
 )
